@@ -5,7 +5,7 @@ ccflags-y += -I$(srctree)/techpack/display/rotator
 ccflags-y += -I$(srctree)/techpack/display/hdcp
 ccflags-y += -I$(srctree)/drivers/clk/qcom/
 ccflags-y += -I$(srctree)/techpack/display/msm/mi_disp
-
+obj-y += mi_disp/mi_disp_notifier.o
 msm_drm-$(CONFIG_DRM_MSM_DP) += dp/dp_altmode.o \
 	dp/dp_parser.o \
 	dp/dp_power.o \
@@ -167,3 +167,4 @@ msm_drm-$(CONFIG_MSM_SDE_ROTATOR) += ../rotator/sde_rotator_dev.o \
 obj-$(CONFIG_DISPLAY_BUILD)	+= msm_drm.o
 
 obj-$(CONFIG_DRM_FBDEV_EMULATION) += msm_fbdev.o
+obj-$(CONFIG_MI_DISP_NOTIFIER) += mi_disp/mi_disp_notifier.o
